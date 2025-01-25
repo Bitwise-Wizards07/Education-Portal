@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
 
 @keyframes changetobg {
     0% {
@@ -25,17 +26,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Roboto", serif;
+    font-family: "PT Sans Narrow", serif;
 }
 
 body {
-    /* background-image: url("images/home4.jpg");
+    background-image: url("images/webback3.jpeg");
     background-size: cover;
-    background-repeat: no-repeat; */
+    background-repeat: no-repeat;
     word-spacing: 5px;
     line-height: 1.5;
-    color: #111111;
-    background-color: rgba(53, 166, 203, 0.6);
+    color: #000000;
+    /* background-color: rgba(53, 166, 203, 0.6); */
     min-height: 100vh;
 }
 
@@ -49,7 +50,9 @@ header {
     height: 70px;
     z-index: 99;
     background: transparent;
-    background-color: rgb(8, 27, 49);
+    background-color: rgba(0, 0, 0, 0.552);
+    font-weight: 400;
+    font-style: normal;
 }
 
 .navbar {
@@ -103,8 +106,8 @@ header {
 }
 
 .navbar a:hover{
-
     transition: 1.5s;
+    color: #ffff00;
     background-color: rgba(240, 248, 255, 0.134);
 }
 
@@ -122,7 +125,7 @@ header {
     width: 110px;
     height: 40px;
     background: transparent;
-    border: 2px solid #e94560;
+    border: 2px solid #ffffff;
     border-radius: 10px;
     cursor: pointer;
     font-size: 1.1em;
@@ -131,16 +134,19 @@ header {
     margin-left: 200px;
     margin-right: 60px;
     transition: 0.5s;
+    /* z-index: 1; */
 }
 
 .navbar .logout:hover {
-    background-color: #e94560;
-    color: #111111;
+    background-color: #00000062;
+    color: #ffff00;
+    transform: scale(0.95);
+    /* z-index: -1; */
 }
 
 .main {
     margin-top: 80px;
-    color: #111111;
+    color: #000000;
     margin-bottom: 80px;
 }
 
@@ -155,7 +161,7 @@ header {
     margin-top: 0.7rem;
     margin-left: 0.5rem;
     margin-bottom: 10px;
-    color: #ff0000;
+    color: #ffffff;
     font-weight: 700; 
 }
 
@@ -163,6 +169,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 
 .changing .bg {
@@ -195,9 +202,11 @@ header {
     padding-left: 2rem;
     font-size: 1.2rem;
     font-weight: 600;
-    color: #ff0101;
+    color: #ffffff;
     margin-bottom: 1rem;
     cursor: pointer;
+    width: 50%;
+    /* background-image: linear-gradient(rgb(62, 14, 77), #122d4d); */
 }
 
 .courses {
@@ -205,30 +214,32 @@ header {
 }
 
 .courses button {
-    color: #081b31;
-    background-color: #e94560;
-    border: none;
+    color: #ffffff;
+    background-image: linear-gradient(rgb(160, 0, 160), #0d2c50);
+    border: #ffffff;
+    border-width: 2px;
     border-radius: 0.8rem;
     padding: 1rem;
     font-size: 1rem;
     font-weight: 500;
     transition: 0.7s;
     cursor: pointer;
-    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.3);
+    /* z-index: -1; */
 }
 
 .courses button:hover {
     transform: scale(0.95);
-    box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
-    background-color: #081b31;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
+    background-image: linear-gradient( #0d2c50,rgb(160, 0, 160));
     color: #f5f5f5;
 }
 
 .pm {
-    color: #ff0000;
+    color: #000000;
     border: none;
     border-radius: 1rem;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.491);
     margin-top: 2rem;
     font-size: 1.5rem;
     font-weight: 550;
@@ -287,13 +298,14 @@ header {
 }
 
 .teacher {
+    color: aliceblue;
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
     height: 100%;
     width: 20%;
-    background-color: rgba(255, 140, 0, 0.6);
+    background-image: linear-gradient(rgb(160, 0, 160), #0d2c50);
     border: none;
     border-radius: 3rem;
     padding: 2rem;
