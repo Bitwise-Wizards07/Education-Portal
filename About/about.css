@@ -156,12 +156,13 @@ header {
     height: 350px;
     background-size: cover;
     background-color: #11111139;
-    justify-content: center;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
     color: #FFF;
     font-weight: 700;
+    font-size: 2rem;
 }
 
 .mix {
