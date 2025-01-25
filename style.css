@@ -22,13 +22,30 @@
     }
 }
 
+@keyframes apper {
+    from{
+        opacity: 0;
+        scale: 0.5;
+        clip-path: inset(100% 0 0 0);
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "PT Sans Narrow", serif;
 }
-
+#circle1{
+    height:200px;
+    width:200px;
+    background: rgb(202, 238, 0);
+    border-radius:50%;
+}
 body {
     background-image: url("images/webback3.jpeg");
     background-size: cover;
@@ -50,7 +67,7 @@ header {
     height: 70px;
     z-index: 99;
     background: transparent;
-    background-color: rgba(0, 0, 0, 0.552);
+    background-color: rgba(0, 0, 0, 0.655);
     font-weight: 400;
     font-style: normal;
 }
@@ -79,12 +96,6 @@ header {
     padding: 7px;
     transition: 0.8s;
 }
-
-/* .navbar a:hover {
-    transition: 0.8s;
-    background-color: #F5F5F5;
-    color: #081b31;
-} */
 
 .navbar a::after{
     content: '';
@@ -182,7 +193,7 @@ header {
     transition: 5s;
     animation-name: changetobg;
     animation-direction:alternate-reverse;
-    animation-duration:30s ;
+    animation-duration:15s ;
     animation-fill-mode: forwards;
     animation-iteration-count: infinite;
     animation-play-state: running;
@@ -272,8 +283,10 @@ header {
     transition: 0.7s;
     cursor: pointer;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
+    animation: apper 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
 }
-
 .box:hover {
     transform: scale(1.25);
     box-shadow: 0 0 17px rgba(0, 0, 0, 0.8);
@@ -295,6 +308,9 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 20rem;
+    animation: apper 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
 }
 
 .teacher {

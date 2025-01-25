@@ -14,7 +14,6 @@
 body {
     word-spacing: 5px;
     line-height: 1.5;
-    color: #111111;
     background-color: rgb(255, 255, 255);
     min-height: 100vh;
 }
@@ -147,7 +146,7 @@ header {
   background-image: url("../images/company1.png");
   background-repeat: no-repeat;
   background-size: cover;
-  color: rgb(0, 0, 0);
+  color: rgb(255, 253, 253);
   margin-bottom: 10px;
 }
 
@@ -160,7 +159,7 @@ header {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    color: #FFF;
+    color: #000000;
     font-weight: 700;
     font-size: 2rem;
 }
