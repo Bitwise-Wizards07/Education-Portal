@@ -8,10 +8,11 @@ document.querySelector(".thumbnail").addEventListener("click", () => {
     window.location.href = "index.html";
 });
 
-var getCol1=document.getElementById("circle1");
-var getCol2=document.getElementById("circle2");
-var getCol3=document.getElementById("circle3");
-var i=0;
+let getCol1 = document.querySelector("#circle1");
+let getCol2 = document.querySelector("#circle2");
+let getCol3 = document.querySelector("#circle3");
+let i=0;
+
 setInterval(()=>{
     getCol1.style.background="conic-gradient(crimson 0deg,crimson "+i+"deg,white "+i+"deg,white)";
     getCol2.style.background="conic-gradient(yellow 0deg,yellow "+i+"deg,white "+i+"deg,white)";
@@ -21,3 +22,25 @@ setInterval(()=>{
         clearInterval(interval);
     }
 },10);
+
+let currNum = 0;
+let intervalId;
+const inerNum = document.querySelectorAll(".iner");
+
+const updateNumber = () => {
+    inerNum.forEach((innum) => {
+        innum.innerText = currNum + "+";
+    });
+
+    currNum += 2;
+
+    if(currNum > 1000) {
+        clearInterval(intervalId);
+    }
+};
+
+
+window.onload = () => {
+    updateNumber();
+    intervalId = setInterval(updateNumber, 7.3);
+};
