@@ -16,6 +16,10 @@ body {
     min-height: 100vh;
 }
 
+button {
+    cursor: pointer;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -139,6 +143,154 @@ header {
     flex-direction: column;
     color: white;
     font-size: 2rem;
+}
+
+.container {
+    background-image: url("../images/contact1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.bg {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(3, 60, 13, 0.7);
+    padding: 3rem;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+
+.bg .rev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bg .rev img {
+    width: 200px;
+    height: 150px;
+    margin-bottom: 2.5rem;
+}
+
+.bg .rev .comment {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 5rem;
+}
+
+.comment .star {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bg .rev .add {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 2rem;
+    color: brown;
+}
+
+.bg .rev .add button {
+    padding: 1rem;
+    margin-top: 2rem;
+    background-color: #e94b31;
+    border: none;
+    border-radius: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    font-weight: 500;
+    color: #000000;
+    transition: all 0.5s ease-in-out;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.3);
+}
+
+.bg .rev .add button:hover {
+    background-color: #f5f5f5;
+    color: #000000;
+    transform: scale(0.95);
+    transition: all 0.5s ease-in-out;
+}
+
+.bg .rform {
+    margin-top: 10rem;
+    padding: 4.5rem;
+}
+
+.rform label p {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 0.6rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.3);
+}
+
+.inp input:focus {
+    outline: none;
+}
+
+.rform button {
+    margin-left: 0.5rem;
+    padding: 0.7rem;
+    border: none;
+    border-radius: 0.6rem;
+    font-size: 1.3rem;
+    margin: 0.5rem;
+    margin-right: 1rem;
+    width: 7rem;
+    background-color: #e94b31;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.3);
+    transition: all 0.5s ease-in-out;
+}
+
+.rform button:hover {
+    background-color: #f5f5f5;
+    color: #000000;
+    transform: scale(0.95);
+    transition: all 0.5s ease-in-out;
+}
+
+.rform .rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.rform .rating .rate input + label {
+    margin-top: 1rem;
+    font-size: 2.5rem;
+    color: #ffe400;
+    text-shadow: 1px 1px 0 #ffe400;
+    cursor: pointer;
+}
+
+.rform .rating input {
+    display: none;
+}
+
+.rform .rating input:checked + label ~ label{
+    color: #838383;
+}
+
+.rform .rating .rate label:active {
+    transform: scale(0.1);
+    transition: all 0.3s ease;
 }
 
 footer {
