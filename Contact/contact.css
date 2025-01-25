@@ -10,6 +10,7 @@
 }
 
 body {
+    word-spacing: 5px;
     min-height: 100vh;
     max-width: 100vw;
     font-family: Arial, sans-serif;

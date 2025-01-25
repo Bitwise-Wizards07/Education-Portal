@@ -8,12 +8,10 @@
     font-family: "PT Sans Narrow", serif;
     font-weight: 400;
     font-style: normal;
-    color: aliceblue;
+    color: rgb(0, 0, 0);
 }
 
 body {
-    background-image: url("../images/webback4.png");
-    background-size: cover;
     word-spacing: 5px;
     line-height: 1.5;
     color: #111111;
@@ -126,6 +124,7 @@ header {
   background-image: url("../images/company1.png");
   background-repeat: no-repeat;
   background-size: cover;
+  color: rgb(0, 0, 0);
   margin-bottom: 10px;
 }
 .photo{
@@ -136,7 +135,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #ffffff;
+    color: #000000;
     font-weight: 700;
 }
 .mix{
