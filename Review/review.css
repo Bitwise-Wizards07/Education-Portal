@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "PT Sans Narrow", serif;
+}
+
+body {
+    word-spacing: 5px;
+    line-height: 1.5;
+    color: #000000;
+    /* background-color: rgba(53, 166, 203, 0.6); */
+    min-height: 100vh;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    z-index: 99;
+    background: transparent;
+    background-color: rgba(0, 0, 0, 0.552);
+    font-weight: 400;
+    font-style: normal;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.thumbnail {
+    font-size: 2em;
+    color:#F5F5F5;
+    user-select: none;
+    padding-top: 8px;
+    margin-left: 40px;
+    cursor: pointer;
+    height: 65px;
+    width: 65px;
+}
+
+.navlinks a {
+    color: #F5F5F5;
+    text-decoration: none;
+    border-radius: 0.85rem;
+    padding: 7px;
+    transition: 0.8s;
+}
+
+/* .navbar a:hover {
+    transition: 0.8s;
+    background-color: #F5F5F5;
+    color: #081b31;
+} */
+
+.navbar a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: aliceblue;
+    border-radius: 5px;
+    left: 0;
+    bottom: -6px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform .7s;
+}
+
+.navbar a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navbar a:hover{
+    transition: 1.5s;
+    color: #ffff00;
+    background-color: rgba(240, 248, 255, 0.134);
+}
+
+.navbar .navlinks {
+    position: relative;
+    font-size: 1.1em;
+    color: #F5F5F5;
+    text-decoration: none;
+    margin-left: 100px;
+    border: none;
+    font-weight: 500;
+}
+
+.navbar .logout {
+    width: 110px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #ffffff;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    font-weight: 500;
+    color: #f5f5f5;
+    margin-left: 200px;
+    margin-right: 60px;
+    transition: 0.5s;
+    /* z-index: 1; */
+}
+
+.navbar .logout:hover {
+    background-color: #00000062;
+    color: #ffff00;
+    transform: scale(0.95);
+    /* z-index: -1; */
+}
+
+.main {
+    background-image: url("../images/contact1.jpg");
+    background-position: center;
+    background-size: cover;
+    
+}
+
+.cool {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 95vh;
+    padding-top: 80px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+footer {
+    color: #f5f5f5;
+}
+
+footer .foot {
+    background-color: #081b31;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-weight: 400;
+}
+
+footer .links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    width: 100%;
+    height: 290px;
+}
+
+footer .part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .part a {
+    text-decoration: none;
+    color: #f5f5f5;
+    text-align: left;
+    margin-bottom: 3px;
+}
+
+footer .part a:hover {
+    text-decoration: underline;
+}
+
+footer .foot-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+footer .foot-title {
+    height: 55px;
+}
+
+footer .follow p {
+    padding-left: 0.95rem;
+}
+
+footer .follow a {
+    margin: 0.2rem;
+}
+
+.copyright {
+    background-color: rgb(1, 14, 29);
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
