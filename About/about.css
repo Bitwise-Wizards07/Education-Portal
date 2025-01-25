@@ -15,10 +15,12 @@ body {
     background-color: rgb(255, 255, 255);
     min-height: 100vh;
 }
+
 .most{
     font-size: 66px;
     font-weight: 500;
 }
+
 header {
     position: fixed;
     top: 0;
@@ -74,14 +76,15 @@ header {
     bottom: -6px;
     transform: scaleX(0);
     transform-origin: right;
-    transition: transform .7s;
+    transition: transform 0.7s;
 }
-.navbar a:hover::after{
+
+.navbar a:hover::after {
     transform-origin: left;
     transform: scaleX(1);
 }
-.navbar a:hover{
 
+.navbar a:hover {
     transition: 1.5s;
     background-color: rgba(240, 248, 255, 0.134);
 }
@@ -127,6 +130,7 @@ header {
     color: #111111;
     text-align: left;
 }
+
 .title {
     margin-top: 0.7rem;
     margin-left: 0.5rem;
@@ -134,18 +138,19 @@ header {
     color: #800000;
     font-weight: 700; 
 }
-.koko{
+
+.koko {
 /* background-color: #111111; */
   background-image: url("../images/company1.png");
   background-repeat: no-repeat;
   background-size: cover;
   margin-bottom: 10px;
 }
-.photo{
+
+.photo {
     margin-top: 70px;
     height: 350px;
     background-size: cover;
-    
     background-color: #11111139;
     justify-content: center;
     display: flex;
@@ -154,31 +159,35 @@ header {
     color: #F5F5F5;
     font-weight: 700;
 }
-.mix{
+
+.mix {
     height: 500px;
     background-color: #f6f6f6;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.phot{
+
+.phot {
     margin-top: 100px;
     width: 50%;
     background-color: #ffffff;
     height: 600px;
 }
 
-.sepc{
+.sepc {
     margin-left: 20px;
     color: rgb(231, 231, 47);
     font-size: large;
     font-weight: 600;
 }
-.hellom{
+
+.hellom {
     width: 90%;
     height: 90%;
     border-radius: 50%;
 }
+
 .phot button {
     color: #ffffff;
     background-color: #f40029;
@@ -191,6 +200,7 @@ header {
     cursor: pointer;
     box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.35);
 }
+
 .phot button:hover {
     transform: scale(0.95);
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
