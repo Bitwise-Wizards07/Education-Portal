@@ -283,11 +283,24 @@ footer .foot-title {
 }
 
 footer .follow p {
-    padding-left: 0.95rem;
+    padding-left: 2rem;
+    margin-bottom: 0.2rem;
 }
 
 footer .follow a {
     margin: 0.2rem;
+}
+
+footer .follow a img {
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+    /* border-radius: 50%; */
+    transition: all 0.3s ease;
+}
+
+footer .follow a img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px 0 rgba(255, 255, 255, 0.7);
+    transition: all 0.3s ease;
 }
 
 .copyright {
