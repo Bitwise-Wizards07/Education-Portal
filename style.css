@@ -333,7 +333,7 @@ header {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     animation: apper 5s linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 20%;
+    animation-range: entry 0% cover 10%;
 }
 
 .box:hover {
@@ -359,7 +359,7 @@ header {
     height: 20rem;
     animation: apper 5s linear;
     animation-timeline: view();
-    animation-range: entry 0% cover 20%;
+    animation-range: entry 0% cover 10%;
 }
 
 .teacher {

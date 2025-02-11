@@ -1,0 +1,3 @@
+function redirect(){
+    var url=""
+}
