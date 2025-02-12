@@ -33,101 +33,128 @@
 
     <div class="title">
         <h1>Our Courses</h1>
-        <div class="coins">1000</div>
+        <div class="coins"> Coins:1000</div>
     </div>
 
     <div class="bar">
-        <input type="text" placeholder="Search courses...">
-        <select class="sort">
-            <option>Sort by Title(A-Z)</option>
-            <option>Sort by Title(Z-A)</option>
-        </select>
+        <input type="text" id="searchBar" placeholder="Search courses...">
+        <select class="sort" id="sortOptions">
+            <option value="A-Z">Sort by Title(A-Z)</option>
+            <option value="Z-A">Sort by Title(Z-A)</option>
+            <option value="high-low">Sort by Price(High-Low)</option>
+            <option value="low-high">Sort by Price(Low-High)</option>
+        </select>        
         <select>
             <option>All Courses</option>
-            <option>Web Development</option>
+            <option>Paid Courses</option>
+            <option>Free Courses</option>
         </select>
     </div>
 
     <div class="main">
         <div class="container">
             <div class="boxes">
-                <div class="box">
+                <div class="box" 
+                data-name="Java" data-price="696"
+                data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
                     <h1>JAVA</h1>
                     <p>East or west java is the best</p>
                     <h3>Coins: 969</h3>
-                    <button class="buy">Buy with Coins</button>
+                    <div class="btns"><button class="buy">Buy with Coins</button></div>
                 </div>
-                <div class="box">
+                <div class="box" 
+                data-name="Cpp" data-price="999"
+                data-topics='["Introduction To C++", "C++", "C++", "C++", "C++"]'>
                     <h1>C++</h1>
                     <p>Hype aise hi thodi hai😏😏</p>
                     <h3>Coins: 999++</h3>
-                    <button class="buy">Buy with Coins</button>
+                    <div class="btns"><button class="buy">Buy with Coins</button></div>
                 </div>
-                <div class="box">
+                <div class="box" 
+                data-name="Python" data-price="777"
+                data-topics='["Introduction To Python", "Python", "Python", "Python", "Python"]'>
                     <h1>PYTHON</h1>
                     <p>AI/ML kaha se sikhega mere pass hi ana padega</p>
                     <h3>Coins: 777</h3>
-                    <button class="buy">Buy with Coins</button>
+                    <div class="btns"><button class="buy">Buy with Coins</button></div>
                 </div>
             </div>
             <div class="boxes">
-                <div class="box">
+                <div class="box" 
+                data-name="React" data-price="199"
+                data-topics='["Introduction To React", "Java", "Java", "Java", "Java"]'>
                     <h1>REACT-JS</h1>
                     <p>BACKEND KA DEVTA KAHETE HAI MUJE</p>
-                    <h3>Coins: Teri aukad jitni</h3>
-                    <button class="buy">Buy with Coins</button>
+                    <h3>Coins: 199</h3>
+                    <div class="btns"><button class="buy">Buy with Coins</button></div>
                 </div>
-                <div class="box">
+                <div class="box" 
+                data-name="Trading" data-price="420"
+                data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
                     <h1>TRADING</h1>
                     <p>Harshad Mehta hamara alumni hai </p>
                     <h3>Coins: 420</h3>
-                    <button class="buy">Buy with Coins</button>
+                    <div class="btns"><button class="buy">Buy with Coins</button></div>
                 </div>
-                <div class="box">
+                <div class="box" 
+                data-name="Calculus" data-price="0"
+                data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
                     <h1>CALCULUS</h1>
                     <p>JEE ka paper yahi se nikalata hai</p>
                     <h3>FREE</h3>
-                    <button class="buy">Enroll</button>
+                    <div class="btns"><button class="buy">Enroll</button></div>
                 </div>
             </div>
             <div class="boxes">
-                <div class="box">
+                <div class="box" 
+                data-name="DSA" data-price="700"
+                data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
                     <h1>DSA</h1>
                     <p>Placement lena hai to aa jao</p>
                     <h3>Coins: Thala*100</h3>
-                    <button class="buy">Buy with Coins</button>
+                    <div class="btns"><button class="buy">Buy with Coins</button></div>
                 </div>
-                <div class="box">
+                <div class="box" 
+                data-name="Cyber" data-price="0"
+                data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
                     <h1>CYBER-SECURITY</h1>
                     <p>Money heist me meri hi strory thi 😁</p>
                     <h3>Free</h3>
-                    <button class="buy">Enroll</button>
+                    <div class="btns"><button class="buy">Enroll</button></div>
                 </div>
-                <div class="box">
+                <div class="box" 
+                data-name="Electronics" data-price="299"
+                data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
                     <h1>Electronics</h1>
                     <p>Streamline your accounting processes with XERO.</p>
-                    <h3>Coins: 200</h3>
-                    <button class="buy">Buy with Coins</button>
+                    <h3>Coins: 299</h3>
+                    <div class="btns"><button class="buy">Buy with Coins</button></div>
                 </div>
             </div>
             <div class="boxes">
-                <div class="box">
+                <div class="box" 
+                data-name="UPSC" data-price="1999"
+                data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
                     <h1>UPSC</h1>
                     <p>Placement nahi laga to aa jao varna unemployed ka tag lag jayega</p>
-                    <h3>tumhari umar*10</h3>
-                    <button class="buy">Buy with Coins</button>
+                    <h3>Coins: 1999</h3>
+                    <div class="btns"><button class="buy">Buy with Coins</button></div>
                 </div>
-                <div class="box">
+                <div class="box" 
+                data-name="Quantum Computing" data-price="1000"
+                data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
                     <h1>Quantum Computing</h1>
                     <p>Beyond your thoughts</p>
                     <h3>Coins: 1000</h3>
-                    <button class="buy">Buy with Coins</button>
+                    <div class="btns"><button class="buy">Buy with Coins</button></div>
                 </div>
-                <div class="box">
+                <div class="box" 
+                data-name="History" data-price="0"
+                data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
                     <h1>HISTORY</h1>
                     <p>Humare jamane ki batein</p>
                     <h3>Free</h3>
-                    <button class="buy">Enroll</button>
+                    <div class="btns"><button class="buy">Enroll</button></div>
                 </div>
             </div>
         </div>
