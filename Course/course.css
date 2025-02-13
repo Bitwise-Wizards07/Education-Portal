@@ -50,13 +50,12 @@ header {
     font-size: 2em;
     color:#F5F5F5;
     user-select: none;
-    padding-top: 8px;
+    padding-top: 3px;
     margin-left: 40px;
     cursor: pointer;
     height: 65px;
     width: 65px;
 }
-
 .navlinks a {
     color: #F5F5F5;
     text-decoration: none;
@@ -64,13 +63,11 @@ header {
     padding: 7px;
     transition: 0.8s;
 }
-
 /* .navbar a:hover {
     transition: 0.8s;
     background-color: #F5F5F5;
     color: #081b31;
 } */
-
 .navbar a::after{
     content: '';
     position: absolute;
@@ -84,18 +81,15 @@ header {
     transform-origin: right;
     transition: transform .7s;
 }
-
 .navbar a:hover::after{
     transform-origin: left;
     transform: scaleX(1);
 }
-
 .navbar a:hover{
     color: #ffff00;
     transition: 1.5s;
     background-color: rgba(240, 248, 255, 0.134);
 }
-
 .navbar .navlinks {
     position: relative;
     font-size: 1.1em;
@@ -105,7 +99,6 @@ header {
     border: none;
     font-weight: 500;
 }
-
 .navbar .logout {
     width: 110px;
     height: 40px;
@@ -120,14 +113,12 @@ header {
     margin-right: 60px;
     transition: 0.5s;
 }
-
 .navbar .logout:hover {
     background-color: #00000062;
     color: #ffff00;
     transform: scale(0.95);
     /* z-index: -1; */
 }
-
 .title {
     margin-top: 70px;
     height: 65px;
@@ -137,7 +128,6 @@ header {
     align-items: center;
     color: #FFF;
 }
-
 .title h1 {
     font-size: 2.5em;
     font-weight: 600;
@@ -145,7 +135,6 @@ header {
     text-align: center;
     margin-left: 10rem;
 }
-
 .title .coins {
     margin-right: 1rem;
     background-color: yellow;
@@ -157,7 +146,6 @@ header {
     padding: 1rem;
     border-radius: 1rem;
 }
-
 .bar {
     height: 60px;
     width: 100%;
