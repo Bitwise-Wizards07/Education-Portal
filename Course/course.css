@@ -200,19 +200,19 @@ header {
     padding-bottom: 2rem;
 }
 
-.container .boxes {
+/* .container .boxes {
     width: 100%;
     height: 23%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-}
+} */
 
-.container .boxes .box {
+.container .box {
     background-image: linear-gradient(rgb(160, 0, 160), #0d2c50);
     width: 25%;
-    height: 100%;
+    height: 23%;
     margin: 1rem;
     border: none;
     border-radius: 0.8rem;

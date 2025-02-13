@@ -15,6 +15,6 @@ if(loggedIn) {
     });
     setTimeout(() => {
         alert("You Are Not Logged In, Please Login..!!");
-    }, 5000);
+    }, 6000);
 }
 

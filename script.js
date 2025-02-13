@@ -15,7 +15,7 @@ if(loggedIn) {
     });
     setTimeout(() => {
         alert("You Are Not Logged In, Please Login..!!");
-    }, 5000);
+    }, 6000);
 }
 
 document.querySelector(".thumbnail").addEventListener("click", () => {
@@ -37,23 +37,48 @@ let interval = setInterval(() => {
     }
 }, 10);
 
-let currNum = 0;
-let intervalId;
+let currNum1 = 0;
+let currNum2 = 0;
+let currNum3 = 0;
+let intervalId1, intervalId2, intervalId3;
 const inerNum = document.querySelectorAll(".iner");
 
-const updateNumber = () => {
-    inerNum.forEach((innum) => {
-        innum.innerText = currNum + "+";
-    });
+const updateNumber1 = () => {
+    document.querySelector("#iner1").innerText = currNum1 + "+";
 
-    currNum += 2;
+    currNum1 += 5;
 
-    if(currNum > 1000) {
-        clearInterval(intervalId);
+    if (currNum1 > 1000) {
+        clearInterval(intervalId1);
+    }
+};
+
+const updateNumber2 = () => {
+    document.querySelector("#iner2").innerText = currNum2 + "+";
+
+    currNum2 += 1;
+
+    if (currNum2 > 200) {
+        clearInterval(intervalId2);
+    }
+};
+
+const updateNumber3 = () => {
+    document.querySelector("#iner3").innerText = currNum3 + "+";
+
+    currNum3 += 20;
+
+    if (currNum3 > 4000) {
+        clearInterval(intervalId3);
     }
 };
 
 window.onload = () => {
-    updateNumber();
-    intervalId = setInterval(updateNumber, 7);
+    updateNumber1();
+    updateNumber2();
+    updateNumber3();
+
+    intervalId1 = setInterval(updateNumber1, 18);
+    intervalId2 = setInterval(updateNumber2, 18);
+    intervalId3 = setInterval(updateNumber3, 18);
 };
