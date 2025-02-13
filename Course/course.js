@@ -18,11 +18,11 @@ if(loggedIn) {
     }, 5000);
 }
 
-if(localStorage.getItem("coins")) {
+if(!localStorage.getItem("coins")) {
     localStorage.setItem("coins", "10000");
 }
 
-if(localStorage.getItem("purchased")) {
+if(!localStorage.getItem("purchased")) {
     localStorage.setItem("purchased", JSON.stringify({}));
 }
 
@@ -91,34 +91,39 @@ const updateProgressBar = (name, totalTopics) => {
 
 document.querySelector("#searchBar").addEventListener("keyup", () => {
     let query = document.getElementById("searchBar").value.toLowerCase();
-    document.querySelectorAll(".course").forEach(course => {
+    document.querySelectorAll(".box").forEach(course => {
         let courseName = course.getAttribute("data-name").toLowerCase();
         course.style.display = courseName.includes(query) ? "block" : "none";
     });
 });
 
+const sortCourses = (order) => {
+    let container = document.querySelector(".container");
+    let courses = [...container.children];
+
+    courses.sort((a, b) => 
+        order === "A-Z"
+            ? a.getAttribute("data-name").localeCompare(b.getAttribute("data-name")) 
+            : b.getAttribute("data-name").localeCompare(a.getAttribute("data-name"))
+    );
+
+    container.innerHTML = "";
+    courses.forEach(course => container.appendChild(course));
+};
+
 document.querySelector("#sortOptions").addEventListener("change", (event) => {
     sortCourses(event.target.value);
 });
 
-const sortCourses = (order) => {
-    let container = document.querySelector(".container");
-    [...container.children].sort((a, b) => order === "A-Z" ? a.textContent.localeCompare(b.textContent) : b.textContent.localeCompare(a.textContent))
-        .forEach(course => container.appendChild(course));
-};
-
-const addCourseButtons = () => {
-    document.querySelectorAll(".course").forEach(course => {
+const courseButtons = () => {
+    document.querySelectorAll(".box").forEach(course => {
         let price = parseInt(course.getAttribute("data-price"));
         let name = course.getAttribute("data-name");
         let topics = JSON.parse(course.getAttribute("data-topics"));
         
-        let button = document.createElement("button");
-        button.textContent = price === 0 ? "Enroll" : `Buy with Coins (${price})`;
-        button.onclick = () => handleCourseClick(name, price, topics);
-        button.className = "course-button";
-        
-        course.appendChild(button);
+        const btn = document.querySelector(".box .btns .buy");
+        btn.innerText = price === 0 ? "Enroll" : `Buy with Coins`;
+        btn.onclick = () => courseClick(name, price, topics);
     });
 };
 
@@ -126,4 +131,4 @@ document.querySelector("#sortOptions").addEventListener('change', () => {
     sortCourses(this.value);
 });
 
-addCourseButtons();
+courseButtons();
