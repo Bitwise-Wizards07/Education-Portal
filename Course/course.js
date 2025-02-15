@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateCoins();
 
-    const courseClick = (name, price, topics) => {
+    const courseClick = (name, price, topics, btn, openBtn) => {
         let coins = parseInt(localStorage.getItem("coins"));
         let purchased = JSON.parse(localStorage.getItem("purchased"));
 
@@ -43,35 +43,84 @@ document.addEventListener("DOMContentLoaded", () => {
             if (price > 0) localStorage.setItem("coins", coins - price);
             purchased[name] = new Array(topics.length).fill(false);
             localStorage.setItem("purchased", JSON.stringify(purchased));
+
+            btn.innerText = "Enrolled";
+            btn.disabled = true;
+
+            openBtn.style.display = "inline-block";
+            updateCoins();
         }
-        showCoursePopup(name, topics);
     };
 
     const showCoursePopup = (name, topics) => {
+
+        document.querySelectorAll(".box").forEach(course => {
+            course.style.display = "none";
+        });
+
         let progress = JSON.parse(localStorage.getItem("purchased"))[name];
         let overlay = document.createElement("div");
+
         overlay.id = "coursePopup";
+
         overlay.innerHTML = `
             <div class='popup-content'>
+
                 <h2>${name} Progress</h2>
-                ${topics.map((t, i) => `<label><input type='checkbox' ${progress[i] ? "checked" : ""} onclick='updateProgress(${i}, "${name}", ${topics.length})'> ${t}</label><br>`).join('')}
-                <div class="progress-bar-container">
-                    <div id="progress-${name}" class="progress-bar"></div><p id="percentage-${name}">0%</p>
+
+                <div class="checkboxes">
+                    ${topics.map((t, i) => `
+                        <label>
+                            <input type='checkbox' 
+                                data-index="${i}" 
+                                data-name="${name}" 
+                                data-total="${topics.length}" 
+                                ${progress[i] ? "checked" : ""}> ${t}
+                        </label>
+                        <br>
+                    `).join('')}
                 </div>
-                <button onclick='closePopup()'>Close</button>
+
+                <div class="progress-container">
+                    <div class="progress-bar-container">
+                        <div id="progress-${name}" class="progress-bar"></div>
+                        <p id="percentage-${name}">0%</p>
+                    </div>
+                </div>
+
+                <button id="closeBtn">Close</button>
             </div>
         `;
-        document.body.appendChild(overlay);
-        updateProgress(name, topics.length);
+
+        const container = document.querySelector(".container");
+
+        container.appendChild(overlay);
+
+        updateProgressBar(name, topics.length);
+
+        document.querySelectorAll("#coursePopup input[type='checkbox']").forEach(checkbox => {
+            checkbox.addEventListener("click", (event) => {
+                let index = event.target.getAttribute("data-index");
+                let courseName = event.target.getAttribute("data-name");
+                let totalTopics = event.target.getAttribute("data-total");
+                updateProgress(index, courseName, totalTopics);
+            });
+        });
+
+        document.querySelector("#closeBtn").addEventListener("click", closePopup);
     };
 
     const closePopup = () => {
+        document.querySelectorAll(".box").forEach(course => {
+            course.style.removeProperty("display");
+        });
+
         document.querySelector("#coursePopup").remove();
     };
 
-    const updateProgress = (i, name, totalTopics) => {
+    const updateProgress = (idx, name, totalTopics) => {
         let purchased = JSON.parse(localStorage.getItem("purchased"));
-        purchased[name][i] = !purchased[name][i];
+        purchased[name][idx] = !purchased[name][idx];
         localStorage.setItem("purchased", JSON.stringify(purchased));
         updateProgressBar(name, totalTopics);
     };
@@ -83,7 +132,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let percentageBar = document.getElementById(`percentage-${name}`);
         let progressBar = document.getElementById(`progress-${name}`);
         if (progressBar && percentageBar) {
-            let pr = percentage !== 0 ? percentage - (percentage / 7) : 0;
+            let pr = percentage !== 0 ? percentage - (percentage / 11) : 0;
             progressBar.style.width = pr + "%";
             percentageBar.textContent = percentage + "%";
         }
@@ -138,16 +187,38 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const courseButtons = () => {
+
         document.querySelectorAll(".box").forEach(course => {
             let price = parseInt(course.getAttribute("data-price"));
             let name = course.getAttribute("data-name");
             let topics = JSON.parse(course.getAttribute("data-topics"));
+            let purchased = JSON.parse(localStorage.getItem("purchased"));
+
+            if (!purchased[name]) {
+                purchased[name] = new Array(topics.length).fill(false);
+                localStorage.setItem("purchased", JSON.stringify(purchased));
+            }
             
             const btn = course.querySelector(".btns .buy");
-            if (btn) {
-                btn.innerText = price === 0 ? "Enroll" : `Buy with Coins`;
-                btn.onclick = () => courseClick(name, price, topics);
+            const openBtn = document.createElement("button");
+            openBtn.className = "openbtn";
+            
+            openBtn.innerText = "Open Course";
+            openBtn.style.display = purchased[name] ? "inline-block" : "none";
+            openBtn.classList.add("open-course");
+            openBtn.onclick = () => {
+                showCoursePopup(name, topics);
+                window.scrollTo({ top: 0, behavior: "smooth" });
             }
+            
+            btn.innerText = purchased[name] ? "Enrolled" : (price === 0 ? "Enroll" : `Buy with Coins`);
+            btn.disabled = purchased[name];
+
+            btn.onclick = () => {
+                courseClick(name, price, topics, btn, openBtn);
+            }
+
+            course.querySelector(".btns").appendChild(openBtn);
         });
     };
 
