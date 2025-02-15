@@ -92,7 +92,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div class="checkboxes">
                     ${topics.map((t, i) => `
                         <label>
-                            <input type='checkbox' 
+                            <input type='checkbox'
+                                class="big-check" 
                                 data-index="${i}" 
                                 data-name="${name}" 
                                 data-total="${topics.length}" 
