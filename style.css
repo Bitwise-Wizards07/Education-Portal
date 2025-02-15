@@ -141,6 +141,19 @@ iframe{
     align-items: center;
     justify-content: center;
 }
+
+.cr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.cr p {
+    margin-top: 20px;
+    font-size:2rem;
+}
+
 body {
     background-image:url('images/webback3.jpeg');
     background-size: cover;
