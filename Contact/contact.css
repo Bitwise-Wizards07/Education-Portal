@@ -266,7 +266,9 @@ footer .part a {
     text-align: left;
     margin-bottom: 3px;
 }
-
+.part img:hover{
+    cursor: pointer;
+}
 footer .part a:hover {
     text-decoration: underline;
 }

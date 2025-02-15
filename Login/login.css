@@ -34,14 +34,14 @@ section{
     animation: changer 7s linear infinite;
 }
 .container {
-    width: 25vw;
-    height: 72vh;
+    width:400px;
+    height: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
     border-radius: 2rem;
-    border: 2px solid black;
+    border: 2px solid rgb(255, 255, 255);
     padding: 1.7rem;
     position: relative;
     background-color: transparent;
@@ -64,7 +64,7 @@ h1 {
     margin-bottom: 1.5rem;
     margin-top: 0.2rem;
     padding: 0.5rem;
-    border: 0.8px solid black;
+    border: 0.8px solid rgb(255, 255, 255);
     border-radius: 0.7rem;
     display: flex;
     justify-content: center;
@@ -108,14 +108,23 @@ transy {
 button {
     width: 100%;
     height: 3rem;
-    background-color: #FFF;
-    color: black;
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(80px);
+    color: rgb(0, 0, 0);
     border: none;
     border-radius: 0.8rem;
     cursor: pointer;
     margin-top: 0.8rem;
     margin-bottom: 0.7rem;
     font-size: 1.2rem;
+    transition: ease-in-out;
+    transition-duration: 0.5s;
+}
+button:hover{
+    transform: scale(95%);
+    transition: ease-in-out;
+    background-color: #ffffffa4;
+    transition-duration: 0.5s;
 }
 
 .focus {
@@ -128,7 +137,6 @@ button {
 }
 
 .signup a {
-    color: #0000EE;
     cursor: pointer;
     font-weight: 600;
     color: #FFF;
@@ -141,4 +149,15 @@ button {
 .hide {
    
     display: none;
+}
+@media(max-width: 290px){
+    .container{
+        width:100%;
+        height: auto;
+        border: none;
+        border-radius: 0;
+    }
+    body{
+        backdrop-filter: blur(8px);
+    }
 }
