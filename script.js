@@ -22,6 +22,12 @@ document.querySelector(".thumbnail").addEventListener("click", () => {
     window.location.href = "index.html";
 });
 
+document.querySelectorAll(".courses .boxes .box").forEach((box) => {
+    box.addEventListener("click", () => {
+        window.location.href = "Course/course.html";
+    });
+});
+
 let getCol1 = document.querySelector("#circle1");
 let getCol2 = document.querySelector("#circle2");
 let getCol3 = document.querySelector("#circle3");
