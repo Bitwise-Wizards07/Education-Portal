@@ -23,7 +23,11 @@
         background-image: url("images/slide6.png");
     }
 }
-
+@keyframes changer{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
 @keyframes apper {
     from{
         opacity: 0;
@@ -67,6 +71,7 @@
     height:200px;
     width:200px;
     background-image: url("images/inercirc1.jpg");
+    /* animation: changer 1s infinite; */
     border-radius:50%;
     margin-right: 100px;
     margin-left: 100px;
@@ -75,7 +80,47 @@
     justify-content: center;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
-
+.video{
+    margin-top: 40px;
+    display: flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+    margin-top: 0.7rem;
+    margin-bottom: 10px;
+    margin-left: 700px;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+    transition: all 1s ease-in-out;
+    color: #FFF;
+    background-image: linear-gradient(rgb(255, 0, 255), #0077ff);
+    height: 4rem;
+    width: 9rem;
+    border-radius: 50%;
+    font-size: large;
+    border-color: #ffffff;
+    border: 2px;
+    animation: changer 5s infinite;
+    animation-direction:alternate;
+    font-weight: 800;
+    letter-spacing: 0.05rem;
+}
+.title:hover{   
+    transition: all 1s ease-in-out;
+    transform: scale(120%);
+}
+iframe{
+    height: 350px;
+    width: 23%;
+    border-radius: 1rem;
+    /* border-color: #f5f5f5; */
+    border: 2px solid rgb(255, 255, 255);
+    box-shadow: 0 0 20px 0 rgb(0, 0, 0);
+}
 .iner {
     height: 170px;
     width: 170px;
@@ -97,7 +142,7 @@
     justify-content: center;
 }
 body {
-    background-image: url("images/webback3.jpeg");
+    background-image:url('images/webback3.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
     word-spacing: 5px;
@@ -132,7 +177,7 @@ header {
     font-size: 2em;
     color:#F5F5F5;
     user-select: none;
-    padding-top: 8px;
+    padding-top: 3px;
     margin-left: 40px;
     cursor: pointer;
     height: 65px;
@@ -217,15 +262,6 @@ header {
     color: #111111;
     text-align: left;
 }
-
-.title {
-    margin-top: 0.7rem;
-    margin-left: 0.5rem;
-    margin-bottom: 10px;
-    color: #ffffff;
-    font-weight: 700; 
-}
-
 .changing {
     display: flex;
     justify-content: space-between;
@@ -274,14 +310,14 @@ header {
 
 .courses button {
     color: #ffffff;
-    background-image: linear-gradient(rgb(160, 0, 160), #0d2c50);
+    background-image: linear-gradient( rgb(187, 1, 187),#15457c);
     border: #ffffff;
     border-width: 2px;
     border-radius: 0.8rem;
     padding: 1rem;
     font-size: 1rem;
     font-weight: 500;
-    transition: 0.7s;
+    transition: 1s;
     cursor: pointer;
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.3);
     /* z-index: -1; */
@@ -290,8 +326,9 @@ header {
 .courses button:hover {
     transform: scale(0.95);
     box-shadow: 0 0 12px rgba(0, 0, 0, 0.7);
-    background-image: linear-gradient( #0d2c50,rgb(160, 0, 160));
+    background-image: linear-gradient( rgb(160, 0, 160),#0d2c50);
     color: #f5f5f5;
+    transition: 1s;
 }
 
 .pm {
@@ -319,9 +356,10 @@ header {
 .box {
     height: 100%;
     width: 20%;
-    border: none;
+    border-radius: 50%;
+    color: #FFF;
     border-radius: 0.9rem;
-    background-color: lightyellow;
+    background-color: #bdbd68;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -370,7 +408,8 @@ header {
     flex-direction: column;
     height: 100%;
     width: 20%;
-    background-image: linear-gradient(rgb(160, 0, 160), #0d2c50);
+    /* background-image: linear-gradient(rgb(160, 0, 160), #0d2c50); */
+    background-image: linear-gradient( rgb(163, 0, 163),#0f3158);
     border: none;
     border-radius: 3rem;
     padding: 2rem;
@@ -389,6 +428,8 @@ header {
 
 .teachers img {
     border-radius: 50%;
+    border-color: #FFF;
+    border-width: 3px;
 }
 
 footer {
@@ -421,6 +462,7 @@ footer .part {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
 }
 
 footer .part a {
@@ -428,6 +470,9 @@ footer .part a {
     color: #f5f5f5;
     text-align: left;
     margin-bottom: 3px;
+}
+.part img:hover{
+    cursor: pointer;
 }
 
 footer .part a:hover {

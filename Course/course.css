@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
-
+@keyframes changer{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
 * {
     margin: 0;
     padding: 0;
@@ -12,8 +16,8 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
     max-width: 100vw;
-    /* background-color: #000; */
-    background-image: url(../images/webback4.png);
+    /* background-color: #5b6302; */
+    background-image: url(../images/webback6.jpg);
     background-size: cover;
 }
 
@@ -50,13 +54,12 @@ header {
     font-size: 2em;
     color:#F5F5F5;
     user-select: none;
-    padding-top: 8px;
+    padding-top: 3px;
     margin-left: 40px;
     cursor: pointer;
     height: 65px;
     width: 65px;
 }
-
 .navlinks a {
     color: #F5F5F5;
     text-decoration: none;
@@ -64,13 +67,11 @@ header {
     padding: 7px;
     transition: 0.8s;
 }
-
 /* .navbar a:hover {
     transition: 0.8s;
     background-color: #F5F5F5;
     color: #081b31;
 } */
-
 .navbar a::after{
     content: '';
     position: absolute;
@@ -84,18 +85,15 @@ header {
     transform-origin: right;
     transition: transform .7s;
 }
-
 .navbar a:hover::after{
     transform-origin: left;
     transform: scaleX(1);
 }
-
 .navbar a:hover{
     color: #ffff00;
     transition: 1.5s;
     background-color: rgba(240, 248, 255, 0.134);
 }
-
 .navbar .navlinks {
     position: relative;
     font-size: 1.1em;
@@ -105,7 +103,6 @@ header {
     border: none;
     font-weight: 500;
 }
-
 .navbar .logout {
     width: 110px;
     height: 40px;
@@ -120,44 +117,21 @@ header {
     margin-right: 60px;
     transition: 0.5s;
 }
-
 .navbar .logout:hover {
     background-color: #00000062;
     color: #ffff00;
     transform: scale(0.95);
     /* z-index: -1; */
 }
-
 .title {
     margin-top: 70px;
     height: 65px;
     width: 100%;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: #FFF;
-}
-
-.title h1 {
-    font-size: 2.5em;
-    font-weight: 600;
-    width: 90%;
-    text-align: center;
-    margin-left: 10rem;
-}
-
-.title .coins {
-    margin-right: 1rem;
-    background-color: yellow;
-    display: flex;
     justify-content: center;
     align-items: center;
-    color: #081b31;
-    font-size: 1.7rem;
-    padding: 1rem;
-    border-radius: 1rem;
+    color: #ff0000;
 }
-
 .bar {
     height: 60px;
     width: 100%;
@@ -174,7 +148,7 @@ header {
     justify-content: center;
     align-items: center;
     border: none;
-    border-radius: 0.7rem;
+    border-radius: 1rem;
     padding-left: 0.7rem;
     font-size: 1rem;
 }
@@ -182,14 +156,24 @@ header {
 .bar select {
     width: 10%;
     height: 70%;
-    border: none;
-    border-radius: 0.7rem;
+    border-radius: 1rem;
 }
 
 .bar select.sort {
     margin: 0 0.4rem 0 0.4rem;
 }
-
+.bar button{
+    color: #FFF;
+    background-image: linear-gradient(rgb(255, 0, 255), #0077ff);
+    height: 4rem;
+    width: 8rem;
+    border-radius: 50%;
+    font-size: large;
+    animation: changer 5s infinite;
+    animation-direction:alternate;
+    font-weight: 800;
+    letter-spacing: 0.05rem;
+}
 .container {
     width: 100%;
     height: 230vh;
@@ -211,10 +195,10 @@ header {
 
 .container .box {
     background-image: linear-gradient(rgb(160, 0, 160), #0d2c50);
+    background-image: linear-gradient(rgb(200, 200, 0), #ffa200);
     width: 25%;
     height: 23%;
     margin: 1rem;
-    border: none;
     border-radius: 0.8rem;
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 1);
     transition: all 0.7s ease-in-out;
@@ -230,22 +214,28 @@ header {
 }
 
 .container .box:hover {
-    transform: scale(1.1);
-    transition: all 0.7s ease-in-out;
+    transform: scale(1.05);
+    transition: all 0.5s ease-in-out;
 }
 
 .container .box button.buy {
-    background-color: #e94560;
-    border: none;
-    border-radius: 0.8rem;
-    padding: 1rem;
+    border-radius: 1rem;
     font-size: 1rem;
     transition: all 0.3s ease-in-out;
     box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.3);
+    color: #FFF;
+    background-image: linear-gradient(rgb(255, 0, 255), #0077ff);
+    height: 4rem;
+    width: 8rem;
+    font-size: large;
+    animation: changer 5s infinite;
+    animation-direction:alternate;
+    font-weight: 800;
+    letter-spacing: 0.05rem;
 }
 
 .container .box button.buy:hover {
-    transform: scale(0.93);
+    transform: scale(0.9);
     transition: all 0.3s ease-in-out;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
@@ -282,6 +272,9 @@ footer .part {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+.part img:hover{
+    cursor: pointer;
 }
 
 footer .part a {
