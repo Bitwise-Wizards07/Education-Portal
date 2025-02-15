@@ -1,3 +1,24 @@
+
+// Clear LocalStorage;
+document.getElementById("resetBtn").addEventListener("click", () => {
+    if (confirm("Are you sure you want to reset everything? This cannot be undone!")) {
+        localStorage.clear();
+        localStorage.setItem("coins", "10000");
+        localStorage.setItem("purchased", JSON.stringify({}));
+
+        document.querySelectorAll(".btns .buy").forEach(btn => {
+            btn.innerText = "Enroll";
+            btn.disabled = false;
+        });
+
+        document.querySelectorAll(".openbtn").forEach(openBtn => {
+            openBtn.style.display = "none";
+        });
+
+        courseButtons();
+    }
+});
+
 document.addEventListener("DOMContentLoaded", () => {
     const logoutbtn = document.querySelector(".navbar .logout");
 
@@ -211,7 +232,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
             }
             
-            btn.innerText = purchased[name] ? "Enrolled" : (price === 0 ? "Enroll" : `Buy with Coins`);
+            btn.innerText = purchased[name] ? "Enrolled" : (price === 0 ? "Enroll" : "Buy with Coins");
             btn.disabled = purchased[name];
 
             btn.onclick = () => {
