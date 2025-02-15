@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="course.css"/>
     <title>Courses</title>
 </head>
 <body>
-    <header>
+    <header data-aos="fade-down" data-aos-duration="1400">
         <div class="thumbnail">
-            <img src="../images/thumbnail.jpg" height="60px" onclick="location.href='../index.html'" style="border-radius: 50%;">
+            <img src="../images/thumbnail.jpg" height="60px" onclick="location.href='../index.html'" style="border-radius: 50%;" data-aos="fade-down-right" data-aos-duration="1800">
         </div>
         <div class="navbar">
             <div class="navlinks">
@@ -31,10 +32,10 @@
         </div>
     </header>
 
-    <div class="title">
+    <div class="title" data-aos="fade-down" data-aos-duration="1400">
         <h1>Our Courses</h1>
     </div>
-    <div class="bar">
+    <div class="bar" data-aos="fade-right" data-aos-duration="1400">
         <input type="text" id="searchBar" placeholder="Search courses...">
         <select class="sort" id="sortOptions">
             <option>Sort Courses</option>
@@ -49,7 +50,7 @@
     </div>
 
     <div class="main">
-        <div class="container">
+        <div class="container" data-aos="zoom-in" data-aos-duration="1000">
             <div class="box" 
             data-name="Java" data-price="969"
             data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
@@ -100,7 +101,8 @@
             </div>
             <div class="box" 
             data-name="DSA" data-price="700"
-            data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
+            data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'
+            data-aos="zoom-in" data-aos-duration="1400">
                 <h1>DSA</h1>
                 <p>Placement lena hai to aa jao</p>
                 <h3>Coins: Thala*100</h3>
@@ -108,7 +110,8 @@
             </div>
             <div class="box" 
             data-name="Cyber" data-price="0"
-            data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
+            data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'
+            data-aos="zoom-in" data-aos-duration="1400">
                 <h1>CYBER-SECURITY</h1>
                 <p>Money heist me meri hi strory thi 😁</p>
                 <h3>Free</h3>
@@ -116,7 +119,8 @@
             </div>
             <div class="box" 
             data-name="Electronics" data-price="299"
-            data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
+            data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'
+            data-aos="zoom-in" data-aos-duration="1400">
                 <h1>Electronics</h1>
                 <p>Streamline your accounting processes with XERO.</p>
                 <h3>Coins: 299</h3>
@@ -124,7 +128,8 @@
             </div>
             <div class="box" 
             data-name="UPSC" data-price="1999"
-            data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
+            data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'
+            data-aos="zoom-in" data-aos-duration="1400">
                 <h1>UPSC</h1>
                 <p>Placement nahi laga to aa jao varna unemployed ka tag lag jayega</p>
                 <h3>Coins: 1999</h3>
@@ -132,7 +137,8 @@
             </div>
             <div class="box" 
             data-name="Quantum Computing" data-price="1000"
-            data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
+            data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'
+            data-aos="zoom-in" data-aos-duration="1400">
                 <h1>Quantum Computing</h1>
                 <p>Beyond your thoughts</p>
                 <h3>Coins: 1000</h3>
@@ -140,7 +146,8 @@
             </div>
             <div class="box" 
             data-name="History" data-price="0"
-            data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'>
+            data-topics='["Introduction To Java", "Java", "Java", "Java", "Java"]'
+            data-aos="zoom-in" data-aos-duration="1400">
                 <h1>HISTORY</h1>
                 <p>Humare jamane ki batein</p>
                 <h3>Free</h3>
@@ -172,10 +179,11 @@
                 </div>
             </div>
             <div class="follow">
-                <p class="foot-title">Follow Us</p>
-                <a href="https://github.com/Tanishq7361"><img src="../images/github.jpg" alt="GitHub" height="35px" width="35px"></a>
-                <a href="https://www.linkedin.com/in/tanishq-shah-43825431b/"><img src="../images/linkedin.png" alt="LinkedIn" height="35px" width="35px"></a>
-                <a href="https://www.instagram.com/tanishq_7307?igsh=cDQ0OHZkODM3d3Jj"><img src="../images/instagram.png" alt="Instagram" height="35px" width="35px"></a>
+                <p class="foot-title">Follow Us !!</p>
+                <a href="https://github.com/Tanishq7361"><img src="../images/github.jpg" alt="GitHub" height="35px" width="35px" style="border-radius: 50%;"></a>
+                <a href="https://www.linkedin.com/in/tanishq-shah-43825431b/"><img src="../images/linkedin.png" alt="LinkedIn" height="35px" width="35px" style="border-radius: 50%;"></a>
+                <a href="https://www.instagram.com/tanishq_7307?igsh=cDQ0OHZkODM3d3Jj"><img src="../images/instagram.png" alt="Instagram" height="35px" width="35px" style="border-radius: 50%;"></a>
+                <a href="https://x.com/"><img src="../images/tweet.jpeg" alt="X(Tweeter)" height="35px" width="35px" style="border-radius: 50%;"></a>
             </div>
         </div>
 
@@ -183,7 +191,10 @@
             <p>&#169; 2025 Aura Education Institute Pvt. Ltd. All rights reserved.</p>
         </div>
     </footer>
-    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="course.js"></script>
 </body>
 </html>

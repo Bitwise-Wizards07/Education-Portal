@@ -320,7 +320,12 @@ header {
 .courses {
     margin: 2rem;
 }
-
+.round{
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #ffffff;
+    font-style: oblique;
+}
 .courses button {
     color: #ffffff;
     background-image: linear-gradient( rgb(187, 1, 187),#15457c);
@@ -372,7 +377,7 @@ header {
     border-radius: 50%;
     color: #FFF;
     border-radius: 0.9rem;
-    background-color: #bdbd68;
+    background-color: #ffffd0a3;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -382,13 +387,10 @@ header {
     transition: 0.7s;
     cursor: pointer;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
-    animation: apper 5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 10%;
 }
 
 .box:hover {
-    transform: scale(1.25);
+    transform: scale(1.1);
     box-shadow: 0 0 17px rgba(0, 0, 0, 0.8);
 }
 
@@ -408,9 +410,6 @@ header {
     justify-content: space-around;
     align-items: center;
     height: 20rem;
-    animation: apper 5s linear;
-    animation-timeline: view();
-    animation-range: entry 0% cover 10%;
 }
 
 .teacher {
@@ -435,7 +434,8 @@ header {
 }
 
 .teacher:hover {
-    transform: scale(1.25);
+    transform: scale(1.1
+    );
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
 }
 

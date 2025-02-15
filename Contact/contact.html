@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="contact.css"/>
     <title>Contact Us</title>
 </head>
 <body>
-    <header>
+    <header data-aos="fade-down" data-aos-duration="1400">
         <div class="thumbnail">
-            <img src="../images/thumbnail.jpg" height="60px" onclick="location.href='../index.html'" style="border-radius: 50%;">
+            <img src="../images/thumbnail.jpg" height="60px" onclick="location.href='../index.html'" style="border-radius: 50%;" data-aos="fade-down-right" data-aos-duration="1800">
         </div>
         <div class="navbar">
             <div class="navlinks">
@@ -109,10 +110,11 @@
                 </div>
             </div>
             <div class="follow">
-                <p class="foot-title">Follow Us</p>
-                <a href="https://github.com/Tanishq7361"><img src="../images/github.jpg" alt="GitHub" height="35px" width="35px"></a>
-                <a href="https://www.linkedin.com/in/tanishq-shah-43825431b/"><img src="../images/linkedin.png" alt="LinkedIn" height="35px" width="35px"></a>
-                <a href="https://www.instagram.com/tanishq_7307?igsh=cDQ0OHZkODM3d3Jj"><img src="../images/instagram.png" alt="Instagram" height="35px" width="35px"></a>
+                <p class="foot-title">Follow Us !!</p>
+                <a href="https://github.com/Tanishq7361"><img src="../images/github.jpg" alt="GitHub" height="35px" width="35px" style="border-radius: 50%;"></a>
+                <a href="https://www.linkedin.com/in/tanishq-shah-43825431b/"><img src="../images/linkedin.png" alt="LinkedIn" height="35px" width="35px" style="border-radius: 50%;"></a>
+                <a href="https://www.instagram.com/tanishq_7307?igsh=cDQ0OHZkODM3d3Jj"><img src="../images/instagram.png" alt="Instagram" height="35px" width="35px" style="border-radius: 50%;"></a>
+                <a href="https://x.com/"><img src="../images/tweet.jpeg" alt="X(Tweeter)" height="35px" width="35px" style="border-radius: 50%;"></a>
             </div>
         </div>
 
@@ -120,7 +122,10 @@
             <p>&#169; 2025 Aura Education Institute Pvt. Ltd. All rights reserved.</p>
         </div>
     </footer>
-    
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script src="contact.js"></script>
 </body>
 </html>
