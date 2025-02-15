@@ -88,6 +88,11 @@ h1 {
     outline: none;
 }
 
+input::placeholder {
+    color: aliceblue;
+    font-style: italic;
+}
+
 label p {
     padding-left: 6px;
     font-size: 1rem;
