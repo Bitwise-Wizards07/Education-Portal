@@ -216,10 +216,10 @@ document.addEventListener("DOMContentLoaded", () => {
             let topics = JSON.parse(course.getAttribute("data-topics"));
             let purchased = JSON.parse(localStorage.getItem("purchased"));
 
-            if (!purchased[name]) {
-                purchased[name] = new Array(topics.length).fill(false);
-                localStorage.setItem("purchased", JSON.stringify(purchased));
-            }
+            // if (!purchased[name]) {
+            //     purchased[name] = new Array(topics.length).fill(false);
+            //     localStorage.setItem("purchased", JSON.stringify(purchased));
+            // }
             
             const btn = course.querySelector(".btns .buy");
             const openBtn = document.createElement("button");
