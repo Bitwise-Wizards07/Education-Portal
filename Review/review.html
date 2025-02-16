@@ -50,18 +50,31 @@
                 <div class="thumb">
                     <img src="../images/thumbnail.jpg" style="border-radius: 50%; cursor: pointer;" onclick="location.href='../index.html'"/>
                 </div>
-                <div class="comment">
-                    <p>All the faculties are really nice.. My all doubts are cleared..</p>
-                    <p class="star">🌟🌟🌟🌟🌟</p>
-                    <p class="name">Tanishq Shah</p>
+
+                <button class="arrow left" onclick="prevReview()">&#10094;</button>
+    
+                <div class="comments-container">
+                    <div class="comment">
+                        <p class="cmt">All the faculties are really nice.. My all doubts are cleared..</p>
+                        <p class="star">🌟🌟🌟🌟🌟</p>
+                        <p class="name">Tanishq Shah</p>
+                    </div>
+                    <div class="comment">
+                        <p class="cmt">Great learning experience, highly recommended!</p>
+                        <p class="star">🌟🌟🌟🌟</p>
+                        <p class="name">Raj Mehta</p>
+                    </div>
                 </div>
+
+                <button class="arrow right" onclick="nextReview()">&#10095;</button>
+
                 <div class="add">
                     <p>Want to add your valuable review..?</p>
-                    <button>Add Review</button>
+                    <button id="add-review-btn">Add Review</button>
                 </div>
             </div>
             <div class="rform">
-                <form>
+                <form id="review-form">
                     <div class="name">
                         <label for="name">
                             <p>Name</p>
@@ -93,8 +106,10 @@
                             <label for="star5"><i class="fas fa-star"></i></label>
                         </div>
                     </div>
-                    <button class="submit">Submit</button>
-                    <button class="close">Close</button>
+                    <div class="submit-btns">
+                        <button class="submit">Submit</button>
+                        <button class="close">Close</button>
+                    </div>
                 </form>
             </div>
         </div>
