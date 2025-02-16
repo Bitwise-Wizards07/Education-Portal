@@ -431,7 +431,21 @@ header {
     transition: all 0.3s ease-in-out;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
 }
-
+.resetagain{
+    display: flex;
+    align-items: center;
+    justify-self: center;
+    margin-bottom: 50px;
+}
+#resetBtn{
+    width: 150px;
+    height: 70px;
+    color: white;
+    font-size: larger;
+    background-image: radial-gradient(rgb(255, 0, 0), rgb(39, 8, 142));
+    border-radius: 50%;
+    border: 3px solid white;
+}
 footer {
     color: #f5f5f5;
 }

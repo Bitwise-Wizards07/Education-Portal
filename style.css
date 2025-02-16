@@ -108,8 +108,10 @@
     animation-direction:alternate;
     font-weight: 800;
     letter-spacing: 0.05rem;
+    cursor: pointer;
 }
-.title:hover{   
+.title:hover{
+    cursor: pointer;
     transition: all 1s ease-in-out;
     transform: scale(120%);
 }
