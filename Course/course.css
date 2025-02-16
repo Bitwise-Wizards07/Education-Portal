@@ -19,8 +19,9 @@ body {
     min-height: 100vh;
     max-width: 100vw;
     /* background-color: #5b6302; */
-    background-image: url(../images/webback6.jpg);
+    background-image: url(../images/webback7.jpg);
     background-size: cover;
+    background-attachment: fixed;
 }
 
 button {
@@ -61,6 +62,10 @@ header {
     cursor: pointer;
     height: 65px;
     width: 65px;
+}
+.thumbnail img{
+    border: 1px solid white;
+    animation: changer 5s infinite;
 }
 .navlinks a {
     color: #F5F5F5;
@@ -131,7 +136,7 @@ header {
     /* z-index: -1; */
 }
 
-.title {
+/* .title {
     margin-top: 70px;
     height: 65px;
     width: 100%;
@@ -139,6 +144,33 @@ header {
     justify-content: center;
     align-items: center;
     color: #ff0000;
+} */
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: yellow; */
+    margin-top: 80px;
+    margin-bottom: 10px;
+    margin-left: 700px;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+    transition: all 1s ease-in-out;
+    color: #FFF;
+    background-image: linear-gradient(rgb(255, 0, 255), #0077ff);
+    height: 4rem;
+    width: 15rem;
+    border-radius: 40%;
+    font-size:medium;
+    border-color: #ffffff;
+    border: 3px solid;
+    /* animation: changer 5s infinite;
+    animation-direction:alternate; */
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+}
+.title:hover{   
+    transition: 1s ease-in-out;
+    transform: scale(1200%);
 }
 
 .bar {
@@ -156,7 +188,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: none;
+    border: 1px solid black;
     border-radius: 1rem;
     padding-left: 0.7rem;
     font-size: 1rem;
@@ -166,6 +198,7 @@ header {
     width: 10%;
     height: 70%;
     border-radius: 1rem;
+    border: 1px solid black;
 }
 
 .bar select.sort {
@@ -206,11 +239,11 @@ header {
 
 .container .box {
     background-image: linear-gradient(rgb(160, 0, 160), #0d2c50);
-    background-image: linear-gradient(rgb(200, 200, 0), #ffa200);
+    /* background-image: linear-gradient(rgb(244, 244, 19), #21c401); */
     width: 25%;
     height: 23%;
     margin: 1rem;
-    border-radius: 0.8rem;
+    border-radius: 10%;
     box-shadow: 0 0 10px 0 rgba(255, 255, 255, 1);
     transition: all 0.7s ease-in-out;
     display: flex;
@@ -222,6 +255,7 @@ header {
     text-align: center;
     color: #ffffff;
     font-size: 1rem;
+    border: 3px solid white;
 }
 
 .container .box:hover {
@@ -251,6 +285,7 @@ header {
     font-size: large;
     animation: changer 5s infinite;
     animation-direction:alternate;
+    border: 2px solid white;
     font-weight: 800;
     letter-spacing: 0.05rem;
     margin-right: 10px;
@@ -275,6 +310,7 @@ header {
     animation: changer 5s infinite;
     animation-direction:alternate;
     font-weight: 800;
+    border: 2px solid white;
     letter-spacing: 0.05rem;
 }
 
@@ -423,7 +459,10 @@ footer .part {
     align-items: center;
     flex-direction: column;
 }
-
+.part img{
+    border: 3px solid white;
+    animation: changer 5s infinite alternate;
+}
 .part img:hover{
     cursor: pointer;
 }

@@ -41,7 +41,7 @@ let interval = setInterval(() => {
     if(i > 360) {
         clearInterval(interval);
     }
-}, 10);
+}, 25);
 
 let currNum1 = 0;
 let currNum2 = 0;
@@ -54,7 +54,7 @@ const updateNumber1 = () => {
 
     currNum1 += 5;
 
-    if (currNum1 > 1000) {
+    if (currNum1 > 2500) {
         clearInterval(intervalId1);
     }
 };
@@ -64,7 +64,7 @@ const updateNumber2 = () => {
 
     currNum2 += 1;
 
-    if (currNum2 > 200) {
+    if (currNum2 > 500) {
         clearInterval(intervalId2);
     }
 };
@@ -74,7 +74,7 @@ const updateNumber3 = () => {
 
     currNum3 += 20;
 
-    if (currNum3 > 4000) {
+    if (currNum3 > 10000) {
         clearInterval(intervalId3);
     }
 };

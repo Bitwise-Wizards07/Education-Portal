@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
 
-
+@keyframes changer{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
 
 * {
     margin: 0;
@@ -45,7 +49,10 @@ header {
     height: 65px;
     width: 65px;
 }
-
+.thumbnail img{
+    border: 1px solid white;
+    animation: changer 5s infinite;
+}
 .navlinks a {
     color: #F5F5F5;
     text-decoration: none;
@@ -272,7 +279,10 @@ footer .part a {
 footer .part a:hover {
     text-decoration: underline;
 }
-
+.part img{
+    border: 3px solid white;
+    animation: changer 5s infinite alternate;
+}
 footer .foot-title {
     font-size: 1.4rem;
     font-weight: 600;

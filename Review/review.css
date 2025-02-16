@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap');
+@keyframes changer{
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
 
 * {
     margin: 0;
@@ -51,7 +56,10 @@ header {
     height: 65px;
     width: 65px;
 }
-
+.thumbnail img{
+    border: 1px solid white;
+    animation: changer 5s infinite;
+}
 .navlinks a {
     color: #F5F5F5;
     text-decoration: none;
@@ -129,6 +137,11 @@ header {
     background-position: center;
     background-size: cover;
     
+}
+
+.thumb img{
+    border: 3px solid white;
+    animation: changer 5s infinite;
 }
 
 .cool {
@@ -327,7 +340,10 @@ footer .part {
 .part img:hover{
     cursor: pointer;
 }
-
+.part img{
+    border: 3px solid white;
+    animation: changer 5s infinite alternate;
+}
 footer .part a {
     text-decoration: none;
     color: #f5f5f5;
